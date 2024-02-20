@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/manrope-v15-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/manrope-v15-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/manrope-v15-latin-700.woff2") format("woff2");
+}
+
+@layer components {
+  html, body {
+    @apply h-full bg-bleached-silk;
+  }
+  #root {
+    @apply h-full flex flex-col;
+  }
+  main {
+    @apply grow;
+  }
+  .max-container {
+    @apply max-w-7xl w-full mx-auto px-10;
+  }
+  .text{
+    @apply hover:text-sepia
+  }
+  .btn {
+    @apply px-[30px] py-4 w-[160px] h-12;
+  }
+  .btn-first {
+    @apply bg-sepia hover:bg-spice-pink text-white hover:;
+  }
+  .btn-two {
+    @apply bg-bleached-silk hover:bg-black text-black hover:text-white;
+  }
+  .text-filed {
+    @apply rounded-lg border-[1px] border-solid border-[#cfcfcf] w-[280px] h-14 md:w-[309px]
+     bg-white  hover:border-[1px] hover:border-solid hover:border-[#d87d4a];
+  }
+  .label-text{
+    @apply text-black text-xs hover:text-hot-lips
+  }
+  .num-btn {
+    @apply bg-belgua w-[120px] h-12;
+  }
+}
