@@ -1,7 +1,12 @@
+import Articles from "../components/Articles"
+import ProductMiniMenu from "../components/ProductMiniMenu"
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <ProductMiniMenu/>
+      <Articles/>
+    </div>
   )
 }
 
