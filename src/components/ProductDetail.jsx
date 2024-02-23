@@ -76,19 +76,6 @@ function ProductDetail({ product }) {
           </div>
         </div>
       </div>
-      {/* images */}
-      {/* <div>
-        <div>
-          <picture>
-            <source media="(min-width: )" srcset="" />
-            <source media="(min-width: )" srcset="" />
-          <img src="" alt="" />
-          </picture>
-        </div>
-        <div>
-
-        </div>
-      </div> */}
       <ProductMiniMenu/>
     </div>
   );

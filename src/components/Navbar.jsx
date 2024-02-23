@@ -40,7 +40,7 @@ function Navbar() {
             <BsCart2 className="text-xl text-white" />
           </button>
           <div className="flex items-center gap-4">
-            <p className="text-lg text-sepia">{user.displayName}</p>
+            <p className="text-lg hidden md:inline-block text-sepia">{user.displayName}</p>
             <button onClick={logout} className="px-4 py-3 bg-sepia rounded-lg">
               <MdLogout className="text-xl text-white"/>
             </button>
