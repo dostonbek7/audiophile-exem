@@ -19,7 +19,8 @@ export default {
         "dr-white": "#FAFAFA",
         "spice-pink": "#FBAF85",
         'bleached-silk':'#f2f2f2',
-        'hot-lips':'#CD2C2C'
+        'hot-lips':'#CD2C2C',
+        'thamar-black':'#191919',
       },
       fontSize:{
         'xs':['13px',{

@@ -1,6 +1,7 @@
 import { TiThMenu } from "react-icons/ti";
 import { BsCart2 } from "react-icons/bs";
 import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <div className="bg-black relative">
@@ -29,7 +30,6 @@ function Navbar() {
           <button>
             <BsCart2 className="text-xl text-white" />
           </button>
-          {/* <hr  className="absolute bottom-[-2px] left-0 right-0 h-1 w-full text-white"/> */}
         </div>
       </div>
     </div>

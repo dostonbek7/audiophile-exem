@@ -7,7 +7,7 @@ function MainLayout() {
   return (
     <div className="h-full flex flex-col">
       <Navbar />
-      <main className="max-container">
+      <main>
         <Outlet />
       </main>
       <Footer />

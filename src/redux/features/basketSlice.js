@@ -15,7 +15,12 @@ export const basketSlice = createSlice({
   name: "basket",
   initialState: initialState(),
   reducers: {
-    addToDate: (state, { payload }) => {},
+    addToDate: (state, { payload }) => {
+      const item = state.allProduct
+    },
+    removeData:(state, {payload})=>{},
+    deleteData:(state, {payload})=>{},
+    total:(state,{payload})=>{},
   },
 });
 
