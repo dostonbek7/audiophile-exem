@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ProductMiniMenu from "./ProductMiniMenu";
 import { useSelector, useDispatch } from "react-redux";
 import { addToData, increment, decrement } from "../redux/features/basketSlice";
+import YouMayAlso from "./YouMayAlso";
 
 function ProductDetail({ product }) {
   const { allProduct, amount } = useSelector((store) => store.product);
@@ -76,6 +77,7 @@ function ProductDetail({ product }) {
           </div>
         </div>
       </div>
+      <YouMayAlso prod={product}/>
       <ProductMiniMenu/>
     </div>
   );
