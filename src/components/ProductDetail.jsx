@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductMiniMenu from "./ProductMiniMenu";
+import { useSelector, useDispatch } from "react-redux";
+import { addToData, increment, decrement } from "../redux/features/basketSlice";
 
 function ProductDetail({ product }) {
+  const { allProduct, amount } = useSelector((store) => store.product);
+ const dispatch = useDispatch()
   return (
     <div>
       <div className="flex flex-col md:flex-row gap-8 md:gap-[52px] lg:gap-[125px] mb-[88px] md:mb-[120px] lg:mb-[160px]">
@@ -10,14 +14,14 @@ function ProductDetail({ product }) {
           <picture>
             {product.categoryImage.desktop && (
               <source className="rounded-lg"
-                media="(min-width: )"
+                media="(min-width:992px )"
                 srcSet={product.categoryImage.desktop.slice(1)}
                 alt={product.slug}
               />
             )}
             {product.categoryImage.tablet && (
               <source className="rounded-lg"
-                media="(min-width: )"
+                media="(min-width:768px )"
                 srcSet={product.categoryImage.tablet.slice(1)}
                 alt={product.slug}
               />
@@ -36,11 +40,11 @@ function ProductDetail({ product }) {
           </p>
           <div className="flex items-center gap-4">
             <button className="addTo flex  gap-5">
-              <span>-</span>
-              <span>0</span>
-              <span>+</span>
+              <span onClick={() => dispatch(decrement(product))}>-</span>
+              <span>{amount}</span>
+              <span onClick={() => dispatch(increment(product))}>+</span>
             </button>
-            <Link className="btn btn-first py-3">See product</Link>
+            <Link onClick={()=>dispatch(addToData({ ...product, amount: 1 }))} className="btn btn-first py-3">Add to cart</Link>
           </div>
         </div>
       </div>
